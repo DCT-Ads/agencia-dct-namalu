@@ -1,5 +1,5 @@
 import { MeetingLink } from "@/components/ContactLinks";
-import { WORK_EMAIL, whatsappLink } from "@/lib/contact";
+import { WHATSAPP_DISPLAY, WORK_EMAIL, whatsappLink } from "@/lib/contact";
 
 const FooterSection = () => {
   const whatsapp = whatsappLink("Olá! Quero falar com a DCT Namalu Ads.");
@@ -20,7 +20,7 @@ const FooterSection = () => {
               rel="noopener noreferrer"
               className="cursor-pointer relative z-20 bg-green-cta hover:bg-green-cta-hover text-accent-foreground font-semibold px-5 py-2.5 rounded-full text-sm text-center"
             >
-              WhatsApp
+              WhatsApp {WHATSAPP_DISPLAY}
             </a>
           )}
           <a

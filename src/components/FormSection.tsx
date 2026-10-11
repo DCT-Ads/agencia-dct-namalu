@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { WORK_EMAIL, emailLink, openExternal, whatsappLink } from "@/lib/contact";
+import { WHATSAPP_DISPLAY, WORK_EMAIL, emailLink, openExternal, whatsappLink } from "@/lib/contact";
 
 const FATURAMENTO: Record<string, string> = {
   ate20: "Até 20 mil",
@@ -120,14 +120,21 @@ const FormSection = () => {
                 </a>
               )}
             </div>
-            {WORK_EMAIL && (
-              <p className="text-center text-sm text-muted-foreground mb-6">
-                e-mail de trabalho:{" "}
-                <a href={`mailto:${WORK_EMAIL}`} className="text-gold underline cursor-pointer">
-                  {WORK_EMAIL}
-                </a>
-              </p>
-            )}
+            <p className="text-center text-sm text-muted-foreground mb-6">
+              {directWhatsapp && (
+                <>
+                  WhatsApp:{" "}
+                  <a href={directWhatsapp} target="_blank" rel="noopener noreferrer" className="text-gold underline cursor-pointer">
+                    {WHATSAPP_DISPLAY}
+                  </a>
+                  {" · "}
+                </>
+              )}
+              e-mail de trabalho:{" "}
+              <a href={`mailto:${WORK_EMAIL}`} className="text-gold underline cursor-pointer">
+                {WORK_EMAIL}
+              </a>
+            </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <input

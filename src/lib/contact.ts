@@ -6,7 +6,9 @@ import type { MouseEvent } from "react";
  * Quando o número estiver vazio, os botões de reunião usam o e-mail.
  */
 export const WORK_EMAIL = "Lorynbegui@gmail.com";
-export const WHATSAPP_NUMBER = "";
+/** +55 41 99274-6873. O 0 depois do 55 não entra no link internacional. */
+export const WHATSAPP_NUMBER = "5541992746873";
+export const WHATSAPP_DISPLAY = "(41) 99274-6873";
 
 const MEETING_SUBJECT = "Solicitar reunião — DCT Namalu Ads";
 
